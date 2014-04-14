@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+
+# This script will bootstrap the template Rails app by:
+#
+# - Replacing 'TemplateApp' with the provided name where necessary
+# - Removing this file, along with the README
+
+unless ARGV[0]
+  puts "You must supply an app name."
+  puts "e.g. ./setup Basecamp"
+  exit 1
+end
+
+new_name = ARGV[0]
+
+%w(
+  app/views/layouts/application.html.erb
+  config/application.rb
+  config/database.yml
+  config/initializers/session_store.rb
+).each do |file|
+  filename = File.join(__dir__, file)
+  content = File.read(filename)
+  content.gsub!(/TemplateApp/, new_name)
+  content.gsub!(/templateapp/, new_name.downcase)
+  File.open(filename, 'w') { |f| f.puts content }
+end
+
+['README.markdown', 'setup'].each do |file|
+  filename = File.join(__dir__, file)
+  FileUtils.rm(filename)
+end

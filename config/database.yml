@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  user: rails
+  pool: 5
+
+development:
+  <<: *default
+  database: templateapp_development
+
+test: &test
+  <<: *default
+  database: templateapp_test
+
+production:
+  url: <%= ENV['DATABASE_URL'] %>
+
+cucumber:
+  <<: *test
