@@ -11,6 +11,8 @@
 
   <body data-controller="<%= params[:controller] %>"
         data-action="<%= params[:action] %>">
+
+    <%= render "shared/flash" %>
     <%= yield %>
     <%= javascript_include_tag 'application' %>
   </body>
