@@ -3,9 +3,9 @@ source 'https://rubygems.org'
 ruby '2.1.1'
 
 # Load environment variables from .env
-gem 'dotenv-rails', '~> 0.10.0', group: [:development, :test]
+gem 'dotenv-rails', '~> 0.11.1', group: [:development, :test]
 
-gem 'rails', '4.1.0'
+gem 'rails', '4.1.1'
 
 # server
 gem 'puma', '~> 2.8.2'
@@ -19,7 +19,7 @@ gem 'uglifier', '~> 2.5.0'
 gem 'jquery-rails', '~> 3.1.0'
 
 # generate JSON objects
-gem 'jbuilder', '~> 2.0.6'
+gem 'jbuilder', '~> 2.0.7'
 
 # password storage
 gem 'bcrypt', '~> 3.1.7'
@@ -44,5 +44,5 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.14.2'
   gem 'cucumber-rails', '~> 1.4.0', require: false
   gem 'database_cleaner', '~> 1.2.0'
-  gem 'fabrication', '~> 2.11.0'
+  gem 'fabrication', '~> 2.11.2'
 end
