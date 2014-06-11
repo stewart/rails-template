@@ -19,7 +19,7 @@ gem 'uglifier', '~> 2.5.0'
 gem 'jquery-rails', '~> 3.1.0'
 
 # generate JSON objects
-gem 'jbuilder', '~> 2.0.7'
+gem 'jbuilder', '~> 2.1.0'
 
 # password storage
 gem 'bcrypt', '~> 3.1.7'
@@ -28,7 +28,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'simple_form', '~> 3.0.2'
 
 group :development, :test do
-  gem 'debugger', '~> 1.6.6'
+  gem 'debugger', '~> 1.6.8'
 
   # improvements for rails console
   gem 'jazz_hands', '~> 0.5.2'
@@ -41,8 +41,8 @@ group :development, :test do
   gem 'binding_of_caller', '~> 0.7.2'
 
   # testing
-  gem 'rspec-rails', '~> 2.14.2'
-  gem 'cucumber-rails', '~> 1.4.0', require: false
-  gem 'database_cleaner', '~> 1.2.0'
+  gem 'rspec-rails', '~> 3.0.1'
+  gem 'cucumber-rails', '~> 1.4.1', require: false
+  gem 'database_cleaner', '~> 1.3.0'
   gem 'fabrication', '~> 2.11.2'
 end
