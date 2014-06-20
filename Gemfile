@@ -18,6 +18,10 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '~> 2.5.0'
 gem 'jquery-rails', '~> 3.1.0'
 
+# bourbon + neat for stylesheets
+gem 'bourbon', '~> 3.2.3'
+gem 'neat', '~> 1.5.1'
+
 # generate JSON objects
 gem 'jbuilder', '~> 2.1.0'
 
